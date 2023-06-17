@@ -25,7 +25,7 @@ const Main = () => {
       "https://backend-alltimedesign.vercel.app/api/task",
       data,
       {
-        headers: { token },
+        headers: { token, "Access-Control-Allow-Origin": "*" },
       }
     );
     if (res.status == 201) {
@@ -65,7 +65,7 @@ const Main = () => {
       `https://backend-alltimedesign.vercel.app/api/task/${updateId}`,
       data,
       {
-        headers: { token },
+        headers: { token, "Access-Control-Allow-Origin": "*" },
       }
     );
     if (res.status == 200) {
@@ -98,7 +98,7 @@ const Main = () => {
     const res = await axios.delete(
       `https://backend-alltimedesign.vercel.app/api/task/${updateId}`,
       {
-        headers: { token },
+        headers: { token, "Access-Control-Allow-Origin": "*" },
       }
     );
     setDate("");
@@ -116,7 +116,7 @@ const Main = () => {
       `https://backend-alltimedesign.vercel.app/api/task/${id}`,
       data,
       {
-        headers: { token },
+        headers: { token, "Access-Control-Allow-Origin": "*" },
       }
     );
     if (res.status === 200) {

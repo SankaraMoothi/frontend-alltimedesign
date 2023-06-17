@@ -12,7 +12,12 @@ const Login = () => {
     };
     const res = await axios.post(
       "https://backend-alltimedesign.vercel.app/api/auth/login",
-      data
+      data,
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+        },
+      }
     );
     const datas = res.data;
     localStorage.setItem("currentUser", JSON.stringify(datas.other));
