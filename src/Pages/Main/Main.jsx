@@ -22,7 +22,7 @@ const Main = () => {
       assignUser: user,
     };
     const res = await axios.post(
-      "https://backend-alltimedesign.vercel.app/api/task",
+      "https://backend-alltimedesign.vercel.app/task",
       data,
       {
         headers: { token, "Access-Control-Allow-Origin": "*" },
@@ -62,7 +62,7 @@ const Main = () => {
       assignUser: user,
     };
     const res = await axios.put(
-      `https://backend-alltimedesign.vercel.app/api/task/${updateId}`,
+      `https://backend-alltimedesign.vercel.app/task/${updateId}`,
       data,
       {
         headers: { token, "Access-Control-Allow-Origin": "*" },
@@ -82,21 +82,21 @@ const Main = () => {
 
   const getUsers = async () => {
     const res = await axios.get(
-      "https://backend-alltimedesign.vercel.app/api/auth/users"
+      "https://backend-alltimedesign.vercel.app/auth/users"
     );
     const data = res.data;
     setUsers(data);
   };
   const getdata = async () => {
     const res = await axios.get(
-      "https://backend-alltimedesign.vercel.app/api/task"
+      "https://backend-alltimedesign.vercel.app/task"
     );
     const data = res.data;
     setTask(data);
   };
   const deleteTask = async () => {
     const res = await axios.delete(
-      `https://backend-alltimedesign.vercel.app/api/task/${updateId}`,
+      `https://backend-alltimedesign.vercel.app/task/${updateId}`,
       {
         headers: { token, "Access-Control-Allow-Origin": "*" },
       }
@@ -113,7 +113,7 @@ const Main = () => {
   const handleCorrect = async (id) => {
     const data = { hai: "hai" };
     const res = await axios.patch(
-      `https://backend-alltimedesign.vercel.app/api/task/${id}`,
+      `https://backend-alltimedesign.vercel.app/task/${id}`,
       data,
       {
         headers: { token, "Access-Control-Allow-Origin": "*" },

@@ -11,7 +11,7 @@ const Login = () => {
       password,
     };
     const res = await axios.post(
-      "https://backend-alltimedesign.vercel.app/api/auth/login",
+      "https://backend-alltimedesign.vercel.app/auth/login",
       data,
       {
         headers: {

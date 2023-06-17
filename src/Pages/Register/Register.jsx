@@ -12,7 +12,7 @@ const Register = () => {
         email,
       };
       const res = await axios.post(
-        "https://backend-alltimedesign.vercel.app/api/auth/register",
+        "https://backend-alltimedesign.vercel.app/auth/register",
         data
       );
       if (res.status == 201) {
